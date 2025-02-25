@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@expo/metro-runtime": "~4.0.1",
+    "@react-native-firebase/app": "^21.11.0",
+    "@react-native-firebase/auth": "^21.11.0",
     "expo": "~52.0.31",
     "expo-status-bar": "~2.0.1",
     "firebase": "^11.3.1",
