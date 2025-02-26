@@ -1,7 +1,29 @@
 {
-  "expo": {
+	"expo": {
     "name": "todoapp",
     "slug": "todoapp",
-    "version": "1.0.0"
-  }
+    "version": "1.0.0",
+		"ios": {
+			"bundleIdentifier": "com.galaxies.firebase",
+			"googleServicesFile": "./GoogleService-Info.plist"
+		},
+		"android": {
+			"package": "com.galaxies.firebase",
+			"googleServicesFile": "./google-services.json"
+		},
+
+		"plugins": [
+			"expo-router",
+			[
+				"expo-build-properties",
+				{
+					"ios": {
+						"useFrameworks": "static"
+					}
+				}
+			],
+			"@react-native-firebase/app",
+			"@react-native-firebase/auth"
+		]
+	}
 }
