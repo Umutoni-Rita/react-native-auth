@@ -9,11 +9,11 @@ export const Home = () => {
     const [loading, setLoading] = useState(false)
 
     const signUp = () => {
-        
+        //signup logic
     }
 
     const signIn = () => {
-
+        // signin logic
     }
 
 }
