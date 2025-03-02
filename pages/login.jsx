@@ -1,12 +1,11 @@
 import React from 'react';
-import { View, TextInput } from 'react-native';
+import { View, TextInput, Text } from 'react-native';
 
 const Login = () => {
 
     return(
         <View>
-            <TextInput placeholder='Email' 
-            />
+            <Text>Login</Text>
         </View>
     )
 }
