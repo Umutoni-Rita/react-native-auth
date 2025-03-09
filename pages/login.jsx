@@ -6,6 +6,7 @@ const Login = () => {
     return(
         <View>
             <Text>Login</Text>
+            //Logic here
         </View>
     )
 }
