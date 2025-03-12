@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import React, { useState } from 'react';
+import React from 'react';
+import {View, Text, Button} from 'react-native';
+import { signOut } from '../controllers/auth';
 
 
-const Home = () => {
-
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [loading, setLoading] = useState(false)
-
-    const signUp = () => {
-        //signup logic
+const Home = ({navigation}) => {
+    const handleLogout = () => {
+        signOut().then(() => {
+            navigation.navigate('Login');
+        });
     }
-
-    const signIn = () => {
-        // signin logic
-    }
-
+    return(
+        <View>
+            <Text>Welcome</Text>
+            <Button title='Logout' onPress={handleLogout} />
+        </View>
+    )
 }
 
 export default Home;
