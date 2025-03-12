@@ -1,13 +1,42 @@
-import React from 'react';
-import { View, TextInput, Text } from 'react-native';
+import React, { useState } from "react";
+import { View, TextInput, Button, Text, Alert } from "react-native";
+import { signIn } from "../controllers/auth";
 
-const Login = () => {
+const Login = ({ navigation }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-    return(
-        <View>
-            <Text>Login</Text>
-            //Logic here
-        </View>
-    )
-}
-export default Login
+  const handleLogin = () => {
+    signIn(email, password)
+    .then(() => {
+      Alert.alert("Success!", "You have successfully logged in!", [
+        { text: "OK", onPress: () => navigation.navigate("Home") },
+      ]);
+    })
+    .catch((error) => {
+        setError(error.message);
+    })
+
+    
+  };
+  return(
+    <View>
+        <TextInput 
+        placeholder="Email"
+        value={email}
+        onChangeText={setEmail}
+        />
+        <TextInput 
+        placeholder="Password"
+        value={password}
+        onChangeText={setPassword}
+        />
+        <Button title="Login" onPress={handleLogin} />
+        {error ? <Text>{error}</Text> : null}
+    </View>
+  )
+};
+
+export default Login;
+

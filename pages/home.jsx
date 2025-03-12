@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import React, { useState } from 'react';
 
 
-export const Home = () => {
+const Home = () => {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -17,3 +17,5 @@ export const Home = () => {
     }
 
 }
+
+export default Home;
