@@ -10,7 +10,7 @@
 		},
 		"android": {
 			"package": "com.galaxies.firebase",
-			"googleServicesFile": "./android/app/google-services.json"
+			"googleServicesFile": "./google-services.json"
 			
 		},
 		"newArchEnabled": true,
