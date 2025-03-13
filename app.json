@@ -5,12 +5,15 @@
     "version": "1.0.0",
 		"ios": {
 			"bundleIdentifier": "com.galaxies.firebase",
-			"googleServicesFile": "./GoogleService-Info.plist"
+			"googleServicesFile": "./ios/GoogleService-Info.plist"
+			
 		},
 		"android": {
 			"package": "com.galaxies.firebase",
-			"googleServicesFile": "./google-services.json"
+			"googleServicesFile": "./android/app/google-services.json"
+			
 		},
+		"newArchEnabled": true,
 
 		"plugins": [
 			"expo-router",
