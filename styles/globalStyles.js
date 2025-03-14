@@ -12,6 +12,20 @@ export const globalStyles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
     padding: 20,
+    justifyContent: 'center',  // Center vertically
+    alignItems: 'center',      // Center horizontally
+  },
+  appBar: {
+    height: 60,
+    backgroundColor: colors.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 4,  // Adds shadow on Android
+  },
+  title: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   header: {
     fontSize: 24,
@@ -19,10 +33,29 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 20,
     fontWeight: 'bold',
   },
+  subheader: {
+    fontSize: 18,
+    color: colors.secondary,
+    marginTop: 10,
+    fontWeight: 'bold',
+  },
+  text: {
+    color: colors.text,
+    fontSize: 16,
+    marginVertical: 5,
+  },
+  orText: {
+    color: colors.secondary,
+    fontSize: 12,
+    padding: 10,
+  },
   button: {
     backgroundColor: colors.primary,
     padding: 10,
     borderRadius: 5,
+    width: '100%',
+    alignItems: 'center',
+    marginTop: 15,
   },
   buttonText: {
     color: '#fff',
@@ -35,6 +68,7 @@ export const globalStyles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     marginBottom: 15,
+    width: '100%',
   },
 });
 
