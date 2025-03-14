@@ -45,3 +45,18 @@ const Login = ({ navigation }) => {
 };
 
 export default Login;
+
+
+const handleLogin = async () => {
+  try {
+    const response = await axios.post("http://localhost:3000/login", { email, password });
+    const { token } = response.data;  
+    // Securely store the token using AsyncStorage
+    await AsyncStorage.setItem("authToken", token);
+    Alert.alert("Success!", "You have successfully logged in!", [
+      { text: "OK", onPress: () => navigation.navigate("Home") },
+    ]);
+  } catch (error) {
+    setError("Invalid credentials");
+  }
+};

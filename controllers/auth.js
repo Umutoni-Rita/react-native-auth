@@ -31,3 +31,10 @@ export const signOut = async () => {
     throw error;
   }
 };
+
+const handleLogin = async () => {
+  const response = await axios.post("http://localhost:3000/login", { email, password });
+  const { token } = response.data;
+  await AsyncStorage.setItem("authToken", token);
+};
+
